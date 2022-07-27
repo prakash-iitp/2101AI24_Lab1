@@ -38,3 +38,7 @@ int main()
             result = num1 - num2; // subtract two numbers
             printf (" Subtraction of %d and %d is: %.2f", num1, num2, result);
             break;
+            case '*':
+            result = num1 * num2; // multiply two numbers
+            printf (" Multiplication of %d and %d is: %.2f", num1, num2, result);
+            break;
