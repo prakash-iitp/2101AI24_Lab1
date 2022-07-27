@@ -28,3 +28,9 @@ int main()
     scanf(" %d", &num1); // take fist number
     printf (" Enter the second number: ");
     scanf (" %d", &num2); // take second number
+    switch(operator)
+    {
+        case '+':
+            result = num1 + num2; // add two numbers
+            printf (" Addition of %d and %d is: %.2f", num1, num2, result);
+            break;
