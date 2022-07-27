@@ -125,3 +125,51 @@ void Merge(int arr[], int l, int r)
         com(arr, l, m, r);
     }
 }
+
+//Function Definition for Quick Sort
+
+int partition(int a[], int l, int r) {
+
+  // select the rightmost element as pivot
+  int pivot = a[r];
+
+  // pointer for greater element
+  int i = (l - 1);
+
+  // traverse each element of the array
+  // compare them with the pivot
+  for (int j = l; j < r; j++) {
+    if (a[j] <= pivot) {
+
+      // if element smaller than pivot is found
+      // swap it with the greater element pointed by i
+      i++;
+
+      // swap element at i with element at j
+      swap(&a[i], &a[j]);
+    }
+  }
+
+  // swap the pivot element with the greater element at i
+  swap(&a[i + 1], &a[r]);
+
+  // return the partition point
+  return (i + 1);
+}
+
+
+void Quick(int a[], int l, int r) {
+  if (l < r) {
+
+    // find the pivot element such that
+    // elements smaller than pivot are on left of pivot
+    // elements greater than pivot are on right of pivot
+    int p = partition(a, l, r);
+
+    // recursive call on the left of pivot
+    Quick(a, l, p - 1);
+
+    // recursive call on the right of pivot
+    Quick(a, p + 1, r);
+  }
+}
