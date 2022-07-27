@@ -43,3 +43,23 @@ void insert(int a[], int n) /* function to sort an aay with insertion sort */
         a[j+1] = temp;    
     }  
 }
+
+//Function Definition for Selection Sort
+void Selection( int n,int a[])
+{
+    int i, j, position;
+
+
+    for (i = 0; i < n-1; i++)
+    {
+        // Finding the index of min element in unsorted part
+        position = i;
+        for (j = i+1; j < n; j++)
+          if (a[j] < a[position])
+            position = j;
+
+        // Swap the found minimum element with the first element of unsorted part
+        swap(&a[position], &a[i]);
+
+    }
+}
