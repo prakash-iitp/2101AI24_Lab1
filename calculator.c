@@ -24,3 +24,7 @@ int main()
         {
             printf (" You have selected: Addition");
          }
+         printf (" \n Enter the first number: ");
+    scanf(" %d", &num1); // take fist number
+    printf (" Enter the second number: ");
+    scanf (" %d", &num2); // take second number
