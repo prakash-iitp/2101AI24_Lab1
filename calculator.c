@@ -42,3 +42,12 @@ int main()
             result = num1 * num2; // multiply two numbers
             printf (" Multiplication of %d and %d is: %.2f", num1, num2, result);
             break;
+            case '/':
+            if (num2 == 0)   // if n2 == 0, take another number
+            {
+                printf (" \n Divisor cannot be zero. Please enter another value ");
+                scanf ("%d", &num2);
+                }
+            result = num1 / num2; // divide two numbers
+            printf (" Division of %d and %d is: %.2f", num1, num2, result);
+            break; 
